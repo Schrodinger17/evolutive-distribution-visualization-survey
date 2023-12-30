@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodes": "^0.1.0"
+  },
+  "scripts": {
+    "test": "gulp",
+    "start": "node server.js",
+    "devStart": "browser-sync server.js"
+  }
+}
