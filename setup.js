@@ -20,6 +20,11 @@ module.exports = () => {
             }
         });
 
+        // Init raw votes
+        if (!votes['raw_votes']) {
+            votes['raw_votes'] = [];
+        }
+
         // Save votes
         require('fs').writeFileSync(votes_file, JSON.stringify(votes));
         console.log('Votes initialized');
