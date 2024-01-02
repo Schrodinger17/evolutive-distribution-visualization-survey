@@ -25,6 +25,11 @@ module.exports = () => {
         res.sendFile('data/tasks.json', { 'root': __dirname });
     });
 
+    // Get the list of demographic questions
+    app.get('/demographic_questions', async (req, res) => {
+        res.sendFile('data/demographic_questions.json', { 'root': __dirname });
+    });
+
     // Vote for a candidate
     app.post('/vote', async (req, res) => {
         const solution_name = req.body.solution_name;

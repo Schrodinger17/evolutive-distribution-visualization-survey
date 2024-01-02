@@ -1,0 +1,20 @@
+[
+    {
+        "question": "Whats is your age ?",
+        "type": "text"
+    },
+    {
+        "question": "Whats is your working domain ?",
+        "type": "text"
+    },
+    {
+        "question": "Are you a scientific person ?",
+        "type": "choice",
+        "choices": [
+            "Yes",
+            "May be",
+            "No",
+            "I don't know"
+        ]
+    }
+]

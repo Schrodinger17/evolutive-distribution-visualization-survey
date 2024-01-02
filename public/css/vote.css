@@ -2,6 +2,10 @@ h2 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
+
 /*Display the two proposition's sections on both side of the screen*/
 #propositions {
     display: flex;
@@ -35,4 +39,23 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#demographic_questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demographic_question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.send_button {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }

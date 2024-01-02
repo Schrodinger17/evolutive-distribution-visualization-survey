@@ -35,6 +35,18 @@ export async function get_criteria() {
     return criteria;
 }
 
+export async function get_demographic_questions() {
+    const resJSON = await fetch('/api/demographic_questions', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const questions = (await resJSON.json());
+    return questions;
+}
+
 // Vote
 export async function post_votes(solution_name, vote) {
     await fetch('/api/vote', {
