@@ -1,0 +1,38 @@
+{
+    "criteria" : [
+        {
+            "name": "difficulty",
+            "status": [
+                "Easy",
+                "Medium",
+                "Hard"
+            ]
+        },
+        {
+            "name": "time",
+            "status": [
+                "Fast",
+                "Normal",
+                "Long"
+            ]
+        },
+        {
+            "name": "accessibility",
+            "status": [
+                "Easy",
+                "Normal",
+                "Difficult"
+            ]
+        }
+    ],
+    "tasks": [
+        {
+            "name": "Task 1",
+            "task": "Do something"
+        },
+        {
+            "name": "Task 2",
+            "task": "Do something"
+        }
+    ]
+}

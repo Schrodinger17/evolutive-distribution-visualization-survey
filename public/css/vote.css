@@ -1,0 +1,38 @@
+h2 {
+    text-align: center;
+}
+
+/*Display the two proposition's sections on both side of the screen*/
+#propositions {
+    display: flex;
+    justify-content: space-around;
+    /*display: inline-block;
+    text-align: center;*/
+}
+
+.propositions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.common {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.criteria_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.criteria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

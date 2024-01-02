@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Readability",
+        "Description": "Readability is ...",
+        "min": "Unreadable",
+        "max": "Perfectly readable",
+        "nb_values": 5
+    },
+    {
+        "name": "Informativeness",
+        "Description": "Quantity of information that we can extract",
+        "min": "None",
+        "max": "A lot",
+        "nb_values": 5
+    },
+    {
+        "name": "Overall note",
+        "Description": "Subjective note",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    }
+]
