@@ -1,33 +1,31 @@
-const distributions = ['bean_plot', 'box_plot', 'mirrored_density_plot', 'violin_plot'];
 
-function load_votes() {
-    return require('./data/votes.json');
-}
+module.exports = () => {
 
-function save_votes(votes) {
-    require('fs').writeFileSync('data/votes.json', JSON.stringify(votes));
-}
+    function setup_votes() {
+        // Create votes file if not exists
+        const votes_file = './data/votes.json';
 
-function init_votes(votes) {
-    distributions.forEach(d => {
-        document.getElementById(d).addEventListener('click', () => {
-            vote(d);
+        if (!require('fs').existsSync(votes_file)) {
+            require('fs').writeFileSync(votes_file, '{}');
+        }
+
+        // Load votes
+        let votes = require(votes_file);
+
+        // Init uninitialized votes
+        const solutions = require('./data/solutions.json').map(s => s.name);
+        solutions.forEach(name => {
+            if (!votes[name]) {
+                votes[name] = [];
+            }
         });
-    });
+
+        // Save votes
+        require('fs').writeFileSync(votes_file, JSON.stringify(votes));
+        console.log('Votes initialized');
+    }
+
+    console.log('Setup')
+    setup_votes();
+    console.log('Setup done')
 }
-
-
-function setup_votes() {
-    // Load the votes
-    let votes = load_votes();
-
-    // Initialize the votes (if not already initialized)
-    votes = init_votes(votes);
-    
-    // Save the votes
-    save_votes(votes);
-}
-
-setup_votes();
-    
-    

@@ -1,5 +1,9 @@
 'use strict';
 
+// Initialize the votes
+const setup = require('./setup.js')
+setup();
+
 const express = require('express');
 const app = express();
 
