@@ -36,13 +36,12 @@ export async function get_criteria() {
 }
 
 // Vote
-export async function insert_votes() {
-    let votes = require('./data/votes.json');
-    let votes_div = document.getElementById('votes');
-    votes_div.innerHTML = '';
-    for (let vote of votes) {
-        let vote_div = document.createElement('div');
-        vote_div.innerHTML = vote.name + ': ' + vote.votes;
-        votes_div.appendChild(vote_div);
-    }
+export async function post_votes(solution_name, vote) {
+    await fetch('/api/vote', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ solution_name: solution_name, vote: vote })
+    })
 }

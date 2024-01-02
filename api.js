@@ -28,13 +28,14 @@ module.exports = () => {
     // Vote for a candidate
     app.post('/vote', async (req, res) => {
         const solution_name = req.body.solution_name;
-        const vote = req.body.vote; 
+        const vote = req.body.vote;
         
         let votes = require('./data/votes.json');
-        votes[solution_name].votes.push(vote);
+
+        votes[solution_name].push(vote);
+        votes['raw_votes'].push(vote);
 
         require('fs').writeFileSync('data/votes.json', JSON.stringify(votes));
-        res.sendFile('data/votes.json', { 'root': __dirname });
     });
     
     return app;
