@@ -1,2 +1,5 @@
 # Nodes modules
 node_modules
+
+# Votes file
+data/votes.json
