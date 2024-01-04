@@ -4,10 +4,7 @@ let proposition1;
 let proposition2;
 
 async function display_demographic_questions() {
-    console.log('Displaying demographic questions');
     const demographic_questions = await data.get_demographic_questions();
-
-    console.log('Loaded demographic questions: ' + JSON.stringify(demographic_questions));
 
     let parent_section = document.getElementById("demographic_questions");
 
@@ -59,9 +56,6 @@ async function display_demographic_questions() {
 
 
 async function display_a_solution(parent, solution) {
-    console.log('Displaying solution: ' + solution.name);
-
-    console.log(parent);
     let parent_section = document.getElementById(parent);
 
     let title = document.createElement('h3');
@@ -83,7 +77,6 @@ async function display_a_solution(parent, solution) {
 
 async function load_solutions() {
     const solutions = await data.get_solutions();
-    console.log('Loaded solutions: ' + JSON.stringify(solutions));
 
     // Randomly choose 2 distributions (distinct)
     let n1 = Math.floor(Math.random() * solutions.length);
@@ -128,7 +121,6 @@ async function display_criteria() {
         inputs.appendChild(first_question_label);
 
         const range = [...Array(crit.nb_values - 2).keys()].map(x => x + 1);
-        console.log(range);
         range.forEach(i => {
             let input = document.createElement('input');
             input.type = "radio";
@@ -244,8 +236,6 @@ async function send_form() {
         demographic_answers: demographic_answers,
         criteria_answers: criteria_answers
     };
-
-    console.log(vote);
 
     let res = data.post_votes(vote);
 

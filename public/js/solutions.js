@@ -3,8 +3,6 @@ import * as data from './data.js';
 async function load_solution_list() {
     const distributions = await data.get_solutions();
 
-    console.log('Loaded votes: ' + JSON.stringify(distributions));
-
     let solutions_list = document.getElementById('solutions');
 
     distributions.forEach(solution => {
@@ -24,10 +22,6 @@ async function load_solution_list() {
         solution_section.appendChild(img);
 
         solutions_list.appendChild(solution_section);
-
-        /*document.getElementById(d).addEventListener('click', () => {
-            console.log('Voting for ' + d);
-        });*/
     });
 }
 

@@ -5,7 +5,7 @@ export async function get_votes() {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    });
 
     const votes = (await resJSON.json());
     return votes;
@@ -17,7 +17,7 @@ export async function get_solutions() {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    });
 
     const solutions = (await resJSON.json());
     return solutions;
@@ -29,7 +29,7 @@ export async function get_criteria() {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    });
 
     const criteria = (await resJSON.json());
     return criteria;
@@ -41,7 +41,7 @@ export async function get_demographic_questions() {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    });
 
     const questions = (await resJSON.json());
     return questions;
@@ -55,7 +55,7 @@ export async function post_votes(vote) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(vote)
-    })
+    });
 
     return status;
 }

@@ -23,17 +23,14 @@ app.use('/public', express.static('public'));
 app.use('/data', express.static('data'));
 
 app.get('/', (req, res) => {
-    console.log('/');
     res.sendFile('public/html/index.html', { 'root': __dirname });
 })
 
 app.get('/vote', (req, res) => {
-    console.log('/vote');
     res.sendFile('public/html/vote.html', { 'root': __dirname });
 })
 
 app.get('/solutions', (req, res) => {
-    console.log('/solutions');
     res.sendFile('public/html/solutions.html', { 'root': __dirname });
 })
 

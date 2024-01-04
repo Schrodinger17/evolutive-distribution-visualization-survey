@@ -32,7 +32,6 @@ module.exports = () => {
 
     // Vote for a candidate
     app.post('/vote', async (req, res) => {
-        console.log(req.body);
         const vote = req.body;
         
         let votes = require('./data/votes.json');
