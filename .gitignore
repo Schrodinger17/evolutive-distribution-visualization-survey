@@ -3,3 +3,4 @@ node_modules
 
 # Votes file
 data/votes.json
+votes.csv
