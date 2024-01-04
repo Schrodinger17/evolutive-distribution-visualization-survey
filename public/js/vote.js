@@ -12,7 +12,7 @@ async function display_demographic_questions() {
         let question_section = document.createElement('div');
         question_section.className = "demographic_question";
 
-        let question_description = document.createElement('p');
+        let question_description = document.createElement('h4');
         question_description.innerHTML = question.question;
         question_section.appendChild(question_description);
 
@@ -160,11 +160,18 @@ async function display_pref_criteria() {
     criteria_list.className = 'criteria_list';
 
     criteria.forEach(crit => {
-        let criteria = document.createElement('div');
-        criteria.id = crit.name;
+        let criteria_div = document.createElement('div');
+        criteria_div.id = crit.name;
+        criteria_div.className = "criteria";
+        criteria_list.appendChild(criteria_div);
+        
+        let criteria = document.createElement('h4');
         criteria.innerHTML = crit.name;
-        criteria.className = "criteria";
-        criteria_list.appendChild(criteria);
+        criteria_div.appendChild(criteria);
+
+        let description = document.createElement('p');
+        description.innerHTML = crit.description;
+        criteria_div.appendChild(description);
 
         let inputs = document.createElement('div');
         inputs.className = "inputs";
@@ -187,7 +194,7 @@ async function display_pref_criteria() {
             inputs.appendChild(question_label);
         });
 
-        criteria.appendChild(inputs);
+        criteria_div.appendChild(inputs);
     });
 
     let parent_section = document.getElementById("criteria");

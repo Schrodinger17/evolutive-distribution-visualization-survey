@@ -26,11 +26,11 @@
 }
 
 .criteria {
-    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0.5em;
 }
 
 #demographic_questions {
@@ -44,6 +44,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0.5em;
 }
 
 #send_button_div {

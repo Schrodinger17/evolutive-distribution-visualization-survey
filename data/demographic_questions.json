@@ -4,7 +4,7 @@
         "type": "text"
     },
     {
-        "question": "Whats is your working domain ?",
+        "question": "Whats is your name ?",
         "type": "text"
     },
     {
@@ -12,7 +12,24 @@
         "type": "choice",
         "choices": [
             "Yes",
-            "May be",
+            "No",
+            "I don't know"
+        ]
+    },
+    {
+        "question": "Did you already worked with data visualization ?",
+        "type": "choice",
+        "choices": [
+            "Yes",
+            "No",
+            "I don't know"
+        ]
+    },
+    {
+        "question": "Do you like pineapple pizza ?",
+        "type": "choice",
+        "choices": [
+            "Yes",
             "No",
             "I don't know"
         ]

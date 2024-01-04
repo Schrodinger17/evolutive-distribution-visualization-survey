@@ -1,21 +1,56 @@
 [
     {
         "name": "Readability",
-        "Description": "Readability is ...",
+        "description": "Which one is the best to read",
         "min": "Unreadable",
         "max": "Perfectly readable",
         "nb_values": 5
     },
     {
-        "name": "Informativeness",
-        "Description": "Quantity of information that we can extract",
-        "min": "None",
-        "max": "A lot",
+        "name": "Aesthetic",
+        "description": "Subjective note on the aesthetic of the visualization",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    },
+    {
+        "name": "Data-friendly",
+        "description": "Which one is the best for this type of data",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    },
+    {
+        "name": "Complexity",
+        "description": "Which one is the more complex",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    },
+    {
+        "name": "Quantity of information displayed for the distribution",
+        "description": "Which one show the more information on the distribution",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    },
+    {
+        "name": "Quantity of information displayed for the evolution over time",
+        "description": "Which one show the more information on the evolution over time",
+        "min": "Bad",
+        "max": "Good",
+        "nb_values": 5
+    },
+    {
+        "name": "Quantity of information that can be extracted",
+        "description": "From which one can we extract the more information",
+        "min": "Bad",
+        "max": "Good",
         "nb_values": 5
     },
     {
         "name": "Overall note",
-        "Description": "Subjective note",
+        "description": "Subjective note",
         "min": "Bad",
         "max": "Good",
         "nb_values": 5
