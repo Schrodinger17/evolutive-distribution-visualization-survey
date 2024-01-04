@@ -12,6 +12,9 @@ app.set('views', 'public/html');
 
 app.use(express.static('/public'));
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 const api = require('./api.js');
 app.use('/api', api());
 

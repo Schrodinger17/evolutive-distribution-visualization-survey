@@ -1,14 +1,17 @@
 import * as data from './data.js';
 
+let proposition1;
+let proposition2;
+
 async function display_demographic_questions() {
     console.log('Displaying demographic questions');
     const demographic_questions = await data.get_demographic_questions();
 
     console.log('Loaded demographic questions: ' + JSON.stringify(demographic_questions));
-    
+
     let parent_section = document.getElementById("demographic_questions");
 
-    demographic_questions.forEach(question => {        
+    demographic_questions.forEach(question => {
         let question_section = document.createElement('div');
         question_section.className = "demographic_question";
 
@@ -60,19 +63,20 @@ async function display_a_solution(parent, solution) {
 
     console.log(parent);
     let parent_section = document.getElementById(parent);
-    
+
     let title = document.createElement('h3');
+    title.id = solution.raw_name;
     title.innerHTML = solution.name;
     parent_section.appendChild(title);
-    
+
     let description = document.createElement('p');
     description.innerHTML = solution.description;
     parent_section.appendChild(description);
-    
+
     let image = document.createElement('img');
     image.src = "data/solutions/" + solution.raw_name + "/" + solution.images[0];
     image.style.maxWidth = "40%";
-    
+
     parent_section.appendChild(image);
 }
 
@@ -88,16 +92,16 @@ async function load_solutions() {
         n2 = Math.floor(Math.random() * solutions.length);
     }
 
-    let proposition1 = solutions[n1];
-    let proposition2 = solutions[n2];
+    proposition1 = solutions[n1];
+    proposition2 = solutions[n2];
 
     display_a_solution("proposition_1", proposition1);
-    display_a_solution("proposition_2", proposition2);    
+    display_a_solution("proposition_2", proposition2);
 }
 
 async function display_criteria() {
     let criteria = await data.get_criteria();
-    
+
     let criteria_list = document.createElement('div');
     criteria_list.id = 'criteria_list';
     criteria_list.className = 'criteria_list';
@@ -156,6 +160,117 @@ async function display_criteria() {
     parent_section.appendChild(criteria_list);
 }
 
+async function display_pref_criteria() {
+    let criteria = await data.get_criteria();
+
+    let criteria_list = document.createElement('div');
+    criteria_list.id = 'criteria_list';
+    criteria_list.className = 'criteria_list';
+
+    criteria.forEach(crit => {
+        let criteria = document.createElement('div');
+        criteria.id = crit.name;
+        criteria.innerHTML = crit.name;
+        criteria.className = "criteria";
+        criteria_list.appendChild(criteria);
+
+        let inputs = document.createElement('div');
+        inputs.className = "inputs";
+
+        const labels = ["P1 is better", "P1 is slightly better", "Both are equal", "P2 is slightly better", "P2 is better"];
+        const range = [...Array(crit.nb_values).keys()];    // Range from 0 to nb_values - 1
+        range.forEach(i => {
+            let input = document.createElement('input');
+            input.type = "radio";
+            //input.id = String(i);
+            input.id = labels[i];
+            input.name = crit.name;
+            inputs.appendChild(input);
+
+            let question_label = document.createElement('label');
+            //question_label.htmlFor = String(i);
+            question_label.htmlFor = labels[i];
+            //question_label.innerHTML = String(i);
+            question_label.innerHTML = labels[i];
+            inputs.appendChild(question_label);
+        });
+
+        criteria.appendChild(inputs);
+    });
+
+    let parent_section = document.getElementById("criteria");
+    parent_section.appendChild(criteria_list);
+}
+
+async function send_form() {
+    //get answers from demographic questions
+    let demographic_questions = await data.get_demographic_questions();
+    let demographic_answers = {};
+    demographic_questions.forEach(question => {
+        switch (question.type) {
+            case "text":
+                demographic_answers[question.question] = document.getElementById(question.question).value;
+                break;
+            case "choice":
+                let choices = document.getElementsByName(question.question);
+                choices.forEach(choice => {
+                    if (choice.checked) {
+                        demographic_answers[question.question] = choice.value;
+                    }
+                });
+                break;
+            default:
+                console.error("Unknown question type: " + question.type);
+        }
+    });
+
+    //get answers from criteria
+    let criteria = await data.get_criteria();
+    let criteria_answers = {};
+    criteria.forEach(crit => {
+        let choices = document.getElementsByName(crit.name);
+        choices.forEach(choice => {
+            if (choice.checked) {
+                criteria_answers[crit.name] = choice.id;
+            }
+        });
+    });
+
+    //send answers to server
+    let vote = {
+        date: new Date().getTime(),
+        proposition_1: proposition1.name,
+        proposition_2: proposition2.name,
+        demographic_answers: demographic_answers,
+        criteria_answers: criteria_answers
+    };
+
+    console.log(vote);
+
+    let res = data.post_votes(vote);
+
+    //deactivate button
+    let button = document.getElementById("send_button");
+    button.disabled = true;
+
+    //display message
+    let message = document.createElement("div");
+    message.className = "message";
+    message.innerHTML = "Thank you for your vote!";
+
+    //add message under the button
+    let button_section = document.getElementById("send_button_section");
+    button_section.appendChild(message);
+}
+
+async function send_button() {
+    let button = document.getElementById("send_button");
+    button.addEventListener("click", send_form);
+}
+
+
 display_demographic_questions();
 load_solutions();
-display_criteria();
+//display_criteria();
+display_pref_criteria();
+send_button();

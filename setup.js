@@ -6,9 +6,10 @@ module.exports = () => {
         const votes_file = './data/votes.json';
 
         if (!require('fs').existsSync(votes_file)) {
-            require('fs').writeFileSync(votes_file, '{}');
+            require('fs').writeFileSync(votes_file, '[]');
         }
-
+        
+        /*
         // Load votes
         let votes = require(votes_file);
 
@@ -28,6 +29,7 @@ module.exports = () => {
         // Save votes
         require('fs').writeFileSync(votes_file, JSON.stringify(votes));
         console.log('Votes initialized');
+        */
     }
 
     console.log('Setup')

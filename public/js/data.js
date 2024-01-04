@@ -48,12 +48,14 @@ export async function get_demographic_questions() {
 }
 
 // Vote
-export async function post_votes(solution_name, vote) {
-    await fetch('/api/vote', {
+export async function post_votes(vote) {
+    let status = await fetch('/api/vote', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ solution_name: solution_name, vote: vote })
+        body: JSON.stringify(vote)
     })
+
+    return status;
 }
