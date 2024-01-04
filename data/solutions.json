@@ -2,25 +2,25 @@
     {
         "raw_name": "bean_plot",
         "name": "Bean plot",
-        "description": "Bean plot",
+        "description": "Bean plot is...",
         "images": ["bean_plot_1.png"]
     },
     {
         "raw_name": "box_plot",
         "name": "Box plot",
-        "description": "Box plot",
+        "description": "Box plot is...",
         "images": ["box_plot_1.png"]
     },
     {
         "raw_name": "mirrored_density_plot",
         "name": "Mirrored density plot",
-        "description": "Mirrored density plot",
+        "description": "Mirrored density plot is...",
         "images": ["mirrored_density_plot_1.png"]
     },
     {
         "raw_name": "violin_plot",
         "name": "Violin plot",
-        "description": "Violin plot",
+        "description": "Violin plot is...",
         "images": ["violin_plot_1.png"]
     }
 ]

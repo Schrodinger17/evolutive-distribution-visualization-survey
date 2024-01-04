@@ -58,7 +58,7 @@ async function display_demographic_questions() {
 async function display_a_solution(parent, solution) {
     let parent_section = document.getElementById(parent);
 
-    let title = document.createElement('h3');
+    let title = document.createElement('h4');
     title.id = solution.raw_name;
     title.innerHTML = solution.name;
     parent_section.appendChild(title);

@@ -3,39 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="public/css/common.css">
     <link rel="stylesheet" href="public/css/vote.css">
     <script type="module" src="public/js/vote.js" defer></script>
 </head>
 
 <body>
-    <h1>Vote</h1>
-    
-    <section id="demographic_questions">
-        <h2>Demographic questions</h2>
-    </section>
+    <div id="header">
+        <h1>Vote</h1>
+    </div>
 
-    <section id="propositions">
-        <div id="proposition_1" class="propositions">
-            <h2>Proposition 1</h2>
+    <div id="body">
+        <div id="introduction">
+            <h2>Introduction</h2>
+            <p>The following form is made of three parts.</p>
+            <p>The first part is about <b>demographic questions</b>.</p>
+            <p>The second part introduce <b>two propositions</b>.</p>
+            <p>The third part is about <b>criteria</b> to compare those two propositions.</p>
+            <p>Don't forget to <b>answer every question</b> and <b>press send</b> once you completed the form.</p>
         </div>
-        
-        <div id="proposition_2" class="propositions">
-            <h2>Proposition 2</h2>
+
+        <div id="demographic_questions">
+            <h2>Demographic questions</h2>
         </div>
-    </section>
 
-    <section id="criteria" class="common">
-        <h2>Criteria</h2>
-        <!--
-            <p><b>1</b> : The proposition 1 is better;  <b>3</b> : They are equivalent;  <b>5</b> : The proposition 2 is better.</p>
-        -->
-    </section>
+        <h2>Propositions</h2>        
+        <div id="propositions">
+            <div id="proposition_1" class="propositions">
+                <h3>Proposition 1 (P1)</h2>
+            </div>
 
-    <section id="send_button_section">
-        <button id="send_button">Send</button>
-    </section>
+            <div id="proposition_2" class="propositions">
+                <h3>Proposition 2 (P2)</h2>
+            </div>
+        </div>
 
-    <div id="home"><a href="/">Home</a></div>
+        <div id="criteria" class="common">
+            <h2>Criteria</h2>
+        </div>
+
+        <div id="send_button_div">
+            <button id="send_button">Send</button>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="home">
+            <p><a href="/">Home</a></p>
+        </div>
+    </div>
 </body>
 
 </html>

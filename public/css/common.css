@@ -1,0 +1,59 @@
+#header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 5em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #84ceeb;
+    
+    overflow: hidden;
+}
+
+#body {
+    position: absolute;
+    top: 5em;
+    bottom: 5em;
+    left: 0px;
+    right: 0px;
+
+    overflow: auto;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 5em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #84ceeb;
+    
+    overflow: hidden;
+}
+
+#home {
+    font-size: 20px;
+    width: 5%;
+    text-align: center;
+}
+
+h1 {
+    margin: 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}

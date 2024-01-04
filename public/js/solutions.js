@@ -7,6 +7,7 @@ async function load_solution_list() {
 
     distributions.forEach(solution => {
         let solution_section = document.createElement('div')
+        solution_section.className = "solution";
 
         let name = document.createElement('h3');
         name.innerHTML = solution.name;
