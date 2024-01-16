@@ -22,5 +22,41 @@
         "name": "Violin plot",
         "description": "Violin plot is...",
         "images": ["violin_plot_1.png"]
+    },
+    {
+        "raw_name": "Contiguous boxplots",
+        "name": "Contiguous boxplots",
+        "description": "Contiguous boxplots is...",
+        "images": ["Contiguous boxplots_1.png"]
+    },
+    {
+        "raw_name": "ridgeline_plots",
+        "name": "Ridgeline plots",
+        "description": "Ridgeline plots is...",
+        "images": ["ridgeline_plots.png"]
+    },
+    {
+        "raw_name": "contiguous_d_heatmap_plot",
+        "name": "Contiguous discrete heatmap plot",
+        "description": "Contiguous discrete heatmap plot is...",
+        "images": ["contiguous_d_heatmap_plot_1.png"]
+    },
+    {
+        "raw_name": "overlapping_boxplots",
+        "name": "Overlapping boxplots",
+        "description": "Overlapping boxplots is...",
+        "images": ["overlapping_boxplots_1.gif"]
+    },
+    {
+        "raw_name": "radial_edge_bundling",
+        "name": "Radial edge bundling",
+        "description": "Radial edge bundling is...",
+        "images": ["radial_edge_bundling_1.png"]
+    },
+    {
+        "raw_name": "continuous_colormap_plus",
+        "name": "Continuous colormap plus",
+        "description": "Continuous colormap plus is...",
+        "images": ["continuous_colormap_plus_1.png"]
     }
 ]
