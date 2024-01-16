@@ -1,10 +1,10 @@
 [
     {
-        "question": "Whats is your age ?",
+        "question": "Whats is your name ?",
         "type": "text"
     },
     {
-        "question": "Whats is your name ?",
+        "question": "Whats is your age ?",
         "type": "text"
     },
     {
@@ -14,6 +14,17 @@
             "Yes",
             "No",
             "I don't know"
+        ]
+    },
+    {
+        "question": "What is your level of education ?",
+        "type": "choice",
+        "choices": [
+            "High School or equivalent",
+            "Bachelor's degree",
+            "Master's degree",
+            "Doctoral degree",
+            "Prefer not to say"
         ]
     },
     {

@@ -22,28 +22,28 @@
     },
     {
         "name": "Complexity",
-        "description": "Which one is the more complex",
+        "description": "Which one is the most complex",
         "min": "Bad",
         "max": "Good",
         "nb_values": 5
     },
     {
         "name": "Quantity of information displayed for the distribution",
-        "description": "Which one show the more information on the distribution",
+        "description": "Which one show the most information about the distribution",
         "min": "Bad",
         "max": "Good",
         "nb_values": 5
     },
     {
         "name": "Quantity of information displayed for the evolution over time",
-        "description": "Which one show the more information on the evolution over time",
+        "description": "Which one show the most information about the evolution over time",
         "min": "Bad",
         "max": "Good",
         "nb_values": 5
     },
     {
         "name": "Quantity of information that can be extracted",
-        "description": "From which one can we extract the more information",
+        "description": "From which one can we extract the most information",
         "min": "Bad",
         "max": "Good",
         "nb_values": 5
