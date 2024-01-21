@@ -30,6 +30,11 @@ module.exports = () => {
         res.sendFile('data/demographic_questions.json', { 'root': __dirname });
     });
 
+    // Get the list of dataset
+    app.get('/dataset', async (req, res) => {
+        res.sendFile('data/dataset.json', { 'root': __dirname });
+    });
+
     // Vote for a candidate
     app.post('/vote', async (req, res) => {
         const vote = req.body;

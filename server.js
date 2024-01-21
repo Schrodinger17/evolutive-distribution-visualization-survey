@@ -34,6 +34,10 @@ app.get('/solutions', (req, res) => {
     res.sendFile('public/html/solutions.html', { 'root': __dirname });
 })
 
+app.get('/tinder', (req, res) => {
+    res.sendFile('public/html/tinder.html', { 'root': __dirname });
+})
+
 const PORT = process.env.PORT || 80;
 
 const server = app.listen(PORT, () => {
