@@ -19,8 +19,8 @@ async function load_solution_list() {
 
         let img = document.createElement('img');
         img.src = "data/solutions/" + solution.raw_name + "/" + solution.images[0];
-        img.style.maxWidth = "75%";
-        img.style.maxHeight = "75%";
+        img.style.maxWidth = "65%";
+        img.style.maxHeight = "65%";
         solution_section.appendChild(img);
 
         solutions_list.appendChild(solution_section);

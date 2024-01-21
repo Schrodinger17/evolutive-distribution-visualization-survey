@@ -69,7 +69,8 @@ async function display_a_solution(parent, solution) {
 
     let image = document.createElement('img');
     image.src = "data/solutions/" + solution.raw_name + "/" + solution.images[0];
-    image.style.maxWidth = "40%";
+    image.style.maxWidth = "65%";
+    image.style.maxHeight = "65%";
 
     parent_section.appendChild(image);
 }
