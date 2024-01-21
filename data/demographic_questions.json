@@ -1,23 +1,33 @@
 [
     {
-        "question": "Whats is your name ?",
+        "question": "Whats is your age?",
         "type": "text"
     },
     {
-        "question": "Whats is your age ?",
-        "type": "text"
-    },
-    {
-        "question": "Are you a scientific person ?",
+        "question": "Whats is your gender?",
         "type": "choice",
         "choices": [
-            "Yes",
-            "No",
-            "I don't know"
+            "Male",
+            "Female",
+            "Undefined",
+            "Combat helicopter",
+            "None of the above"
         ]
     },
     {
-        "question": "What is your level of education ?",
+        "question": "What is you field?",
+        "type": "choice",
+        "choices": [
+            "Scientific",
+            "Literature",
+            "Engineer",
+            "Engineer",
+            "Literature",
+            "None of the above"
+        ]
+    },
+    {
+        "question": "What is your level of education?",
         "type": "choice",
         "choices": [
             "High School or equivalent",
@@ -28,7 +38,7 @@
         ]
     },
     {
-        "question": "Did you already worked with data visualization ?",
+        "question": "Did you already worked with data visualization?",
         "type": "choice",
         "choices": [
             "Yes",
