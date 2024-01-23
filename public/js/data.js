@@ -1,3 +1,4 @@
+'use strict';
 
 export async function get_votes() {
     const resJSON = await fetch('/api/votes', {
@@ -33,6 +34,30 @@ export async function get_criteria() {
 
     const criteria = (await resJSON.json());
     return criteria;
+}
+
+export async function get_tasks() {
+    const resJSON = await fetch('/api/tasks', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    const tasks = (await resJSON.json());
+    return tasks;
+}
+
+export async function get_dataset() {
+    const resJSON = await fetch('/api/dataset', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    const dataset = (await resJSON.json());
+    return dataset;
 }
 
 export async function get_demographic_questions() {

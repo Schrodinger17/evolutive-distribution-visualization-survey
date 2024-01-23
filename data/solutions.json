@@ -2,56 +2,67 @@
     {
         "raw_name": "contiguous_box_plots",
         "name": "Contiguous box_plots",
-        "description": "Contiguous box_plots is..."
+        "description": "Contiguous box_plots is...",
+        "file_format": "png"
     },
     {
         "raw_name": "contiguous_md_plots",
         "name": "Contiguous md plots",
-        "description": "Contiguous md plots is..."
+        "description": "Contiguous md plots is...",
+        "file_format": "png"
     },
     {
         "raw_name": "contiguous_violin_plots",
         "name": "Contiguous violin plots",
-        "description": "Contiguous violin plots is..."
+        "description": "Contiguous violin plots is...",
+        "file_format": "png"
     },
     {
         "raw_name": "contiguous_bean_plots",
         "name": "Contiguous bean plots",
-        "description": "Contiguous bean plots is..."
+        "description": "Contiguous bean plots is...",
+        "file_format": "png"
     },
     {
         "raw_name": "ridgeline_plots",
         "name": "Ridgeline plots",
-        "description": "Ridgeline plots is..."
+        "description": "Ridgeline plots is...",
+        "file_format": "png"
     },
     {
         "raw_name": "contiguous_d_heatmap_plot",
         "name": "Contiguous discrete heatmap plot",
-        "description": "Contiguous discrete heatmap plot is..."
+        "description": "Contiguous discrete heatmap plot is...",
+        "file_format": "png"
     },
     {
         "raw_name": "continuous_colormap_plus",
         "name": "Continuous colormap plus",
-        "description": "Continuous colormap plus is..."
+        "description": "Continuous colormap plus is...",
+        "file_format": "png"
     },
     {
         "raw_name": "overlapping_box_plots",
         "name": "Overlapping box plots",
-        "description": "Overlapping box plots is..."
+        "description": "Overlapping box plots is...",
+        "file_format": "gif"
     },
     {
         "raw_name": "overlapping_violin_plots",
         "name": "Overlapping violin plots",
-        "description": "Overlapping violin plots is..."
+        "description": "Overlapping violin plots is...",
+        "file_format": "gif"
     },
     {
         "raw_name": "overlapping_bean_plots",
         "name": "Overlapping bean plots",
-        "description": "Overlapping bean plots is..."
+        "description": "Overlapping bean plots is...",
+        "file_format": "gif"
     },
     {
         "raw_name": "radial_edge_bundling",
         "name": "Radial edge bundling",
-        "description": "Radial edge bundling is..."
+        "description": "Radial edge bundling is...",
+        "file_format": "png"
     }
 ]

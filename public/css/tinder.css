@@ -1,0 +1,57 @@
+#demographic_questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demographic_question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+#send_button_div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pairs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.solution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#send_button {
+    display: flex;
+    justify-content: center;
+}
+
+#equal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#info > h1 {
+    text-align: center;
+}

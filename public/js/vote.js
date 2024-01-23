@@ -1,3 +1,5 @@
+'use strict';
+
 import * as data from './data.js';
 
 let proposition1;

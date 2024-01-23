@@ -1,3 +1,5 @@
+'use strict';
+
 import * as data from './data.js';
 
 async function load_solution_list() {
@@ -18,7 +20,7 @@ async function load_solution_list() {
         solution_section.appendChild(description);
 
         let img = document.createElement('img');
-        img.src = "data/solutions/" + solution.raw_name + "/" + solution.images[0];
+        img.src = "data/solutions/" + solution.raw_name + "/" + solution.raw_name + "_1." + solution.file_format;
         img.style.maxWidth = "65%";
         img.style.maxHeight = "65%";
         solution_section.appendChild(img);
