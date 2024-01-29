@@ -58,11 +58,11 @@ async function display_demographic_questions() {
 
         demographic_section.appendChild(question_section);
     });
-
     
     let body = document.getElementById("body");
     body.appendChild(demographic_section);
 
+    let start_time = new Date();
     // Send button
     let send_button = document.createElement('button');
     send_button.innerHTML = "Continue";
@@ -87,6 +87,8 @@ async function display_demographic_questions() {
                 default:
                     console.error("Unknown question type: " + question.type);
             }
+
+            demographic_answers["duration"] = new Date() - start_time;
         });
 
         answers["demographic"] = demographic_answers;
@@ -198,6 +200,8 @@ async function display_solution(solutions) {
     let body = document.getElementById("body");
     body.appendChild(solution_div);
     
+    let start_time = new Date();
+
     // Next button
     let send_button = document.createElement('button');
     send_button.id = "send_button";
@@ -213,6 +217,7 @@ async function display_solution(solutions) {
         let send_button = document.getElementById("button");
         send_button.remove();
 
+        answers["solution"].push({"solution": solution.raw_name, "duration": new Date() - start_time});
         display_solution(solutions);
     }
     
@@ -228,6 +233,9 @@ async function display_solutions() {
     console.log("Display solutions.")
     const solutions = await data.get_solutions();
 
+    //Times
+    answers["solution"] = [];
+    
     display_solution(solutions);
     //display_solution([]);
 }
@@ -293,10 +301,12 @@ async function display_pair(pairs) {
         return;
     }
 
+    let start_time = new Date();
+
     let go_next = async function (vote) {
         console.log("Next pair.");
 
-        answers["vote"].push({"solutions": pair.map(e => e.raw_name), "vote": vote});
+        answers["vote"].push({"solutions": pair.map(e => e.raw_name), "vote": vote, "duration": new Date() - start_time});
         
         //Remove solution
         let solution_div = document.getElementById("pairs");
@@ -386,6 +396,8 @@ async function display_pairs() {
 
 async function send_votes() {
     console.log("Send votes.");
+
+    answers["date"] = new Date();
 
     const status = await data.post_votes(answers);
 
