@@ -187,16 +187,22 @@ async function display_solution(solutions) {
     name.innerHTML = solution.name;
     solution_div.appendChild(name);
 
-    let description = document.createElement('p');
-    description.innerHTML = solution.description;
-    solution_div.appendChild(description);
+    solution.description.split('\n').forEach(paragraph => {
+        let description = document.createElement('p');
+        description.innerHTML = paragraph;
+        solution_div.appendChild(description);
+    });
+
+    let img_div = document.createElement('div');
+    img_div.id = "img_div";
 
     let img = document.createElement('img');
     img.src = "data/solutions/" + solution.raw_name + "/" + solution.raw_name + "_tokyo." + solution.file_format;
-    img.style.maxWidth = "50%";
-    img.style.maxHeight = "50%";
-    solution_div.appendChild(img);
-
+    
+    img_div.appendChild(img);
+    
+    solution_div.appendChild(img_div);
+    
     let body = document.getElementById("body");
     body.appendChild(solution_div);
     
@@ -323,7 +329,6 @@ async function display_pair(pairs) {
     pair.forEach(solution => {
         let solution_div = document.createElement('div')
         solution_div.className = "solution";
-        solution_div.style.maxWidth = "40%";
 
         let name = document.createElement('h2');
         name.innerHTML = solution.name;

@@ -1,68 +1,80 @@
 [
     {
         "raw_name": "contiguous_box_plots",
-        "name": "Contiguous box_plots",
-        "description": "Contiguous box_plots is...",
+        "name": "Contiguous box plots",
+        "description": "Contiguous visualization combines several distribution visualization by placing them next to each other. The x-axis represents the time dimension, where each distribution is a unit of time.\nA box plot is a visual representation of a distribution, displaying key statistics like median, quartiles, and potential outliers. A rectangular box spans the interquartile range (IQR) with a line denoting the median. Whiskers extend to show the range within 1.5 times the IQR, and individual points beyond are marked as outliers.",
         "file_format": "png"
     },
     {
         "raw_name": "contiguous_md_plots",
         "name": "Contiguous md plots",
-        "description": "Contiguous md plots is...",
+        "description": "Contiguous visualization combines several distribution visualization by placing them next to each other. The x-axis represents the time dimension, where each distribution is a unit of time.\nA mirror density plot is a plot of the estimated kernel density of a distribution. The mirror curves represent the density of the data, with wider sections indicating higher data density.",
         "file_format": "png"
     },
     {
         "raw_name": "contiguous_violin_plots",
         "name": "Contiguous violin plots",
-        "description": "Contiguous violin plots is...",
+        "description": "Contiguous visualization combines several distribution visualization by placing them next to each other. The x-axis represents the time dimension, where each distribution is a unit of time.\nA violin plot is a graphical representation of a distribution, combining aspects of a box plot and a kernel density plot. It features a symmetrical shape resembling a violin, with wider sections indicating higher data density. The plot displays quartiles (as a rectangle) and median (as a point inside quartiles’ rectangle) like a box plot but provides a more detailed view of the data's probability density.",
         "file_format": "png"
     },
     {
         "raw_name": "contiguous_bean_plots",
         "name": "Contiguous bean plots",
-        "description": "Contiguous bean plots is...",
+        "description": "Contiguous visualization combines several distribution visualization by placing them next to each other. The x-axis represents the time dimension, where each distribution is a unit of time.\nA bean plot is a graphical representation of a distribution, combining aspects of a scatter plot and a kernel density plot. It features a symmetrical shape resembling a bean, with wider sections indicating higher data density. The plot displays individuals as beans (lines) and provides a more detailed view of the data's probability density.",
         "file_format": "png"
     },
     {
         "raw_name": "ridgeline_plots",
         "name": "Ridgeline plots",
-        "description": "Ridgeline plots is...",
+        "description": "Contiguous visualization combines several distribution visualizations by placing them above each other with a slight overlap. The y-axis represents the time dimension where each distribution is a unit of time.",
         "file_format": "png"
     },
     {
         "raw_name": "contiguous_d_heatmap_plot",
         "name": "Contiguous discrete heatmap plot",
-        "description": "Contiguous discrete heatmap plot is...",
+        "description": "A heat map is a visual representation of the distribution where color is used to represent the distribution density. In this visualization, the x-axis represents the time dimension (each column being a discrete distribution) and the y-axis models the working feature.",
         "file_format": "png"
     },
     {
         "raw_name": "continuous_colormap_plus",
         "name": "Continuous colormap plus",
-        "description": "Continuous colormap plus is...",
+        "description": "A color map plus is a visual representation of the distribution where color is used to represent the distribution density. In this visualization, the x-axis represents the time dimension (each column being a contiguous distribution) and the y-axis models the working feature. The add-on of this visualization is the overlay of statistical descriptors (Min, Max, Q1, median, Q2) in the form of a line chart.",
         "file_format": "png"
     },
     {
         "raw_name": "overlapping_box_plots",
         "name": "Overlapping box plots",
-        "description": "Overlapping box plots is...",
+        "description": "Overlapping display methods use time to display the distribution one by one. It is done by placing successively distributions upon each other resulting in a video-like visualization (gif).\nA box plot is a visual representation of a distribution, displaying key statistics like median, quartiles, and potential outliers. A rectangular box spans the interquartile range (IQR) with a line denoting the median. Whiskers extend to show the range within 1.5 times the IQR, and individual points beyond are marked as outliers.",
+        "file_format": "gif"
+    },
+    {
+        "raw_name": "overlapping_md_plots",
+        "name": "Overlapping mirror density plots",
+        "description": "Overlapping display methods use time to display the distribution one by one. It is done by placing successively distributions upon each other resulting in a video-like visualization (gif).\nA mirror density plot is a plot of the estimated kernel density of a distribution. The mirror curves represent the density of the data, with wider sections indicating higher data density.",
         "file_format": "gif"
     },
     {
         "raw_name": "overlapping_violin_plots",
         "name": "Overlapping violin plots",
-        "description": "Overlapping violin plots is...",
+        "description": "Overlapping display methods use time to display the distribution one by one. It is done by placing successively distributions upon each other resulting in a video-like visualization (gif).\nA violin plot is a graphical representation of a distribution, combining aspects of a box plot and a kernel density plot. It features a symmetrical shape resembling a violin, with wider sections indicating higher data density. The plot displays quartiles (as a rectangle) and median (as a point inside quartiles’ rectangle) like a box plot but provides a more detailed view of the data's probability density.",
         "file_format": "gif"
     },
     {
         "raw_name": "overlapping_bean_plots",
         "name": "Overlapping bean plots",
-        "description": "Overlapping bean plots is...",
+        "description": "Overlapping display methods use time to display the distribution one by one. It is done by placing successively distributions upon each other resulting in a video-like visualization (gif).\nA bean plot is a graphical representation of a distribution, combining aspects of a scatter plot and a kernel density plot. It features a symmetrical shape resembling a bean, with wider sections indicating higher data density. The plot displays individuals as beans (lines) and provides a more detailed view of the data's probability density.",
         "file_format": "gif"
     },
     {
         "raw_name": "radial_edge_bundling",
         "name": "Radial edge bundling",
-        "description": "Radial edge bundling is...",
+        "description": "Graphical visualization where each node is a distribution and each vertex is represented if two distributions are similar (the more similar two distributions are, the thicker the edge).",
+        "file_format": "png"
+    },
+    {
+        "raw_name": "arc_diagram_plus",
+        "name": "Arc diagram plus",
+        "description": "Graphical visualization where each node is a distribution and each vertex is represented if two distributions are similar (the more similar two distributions are, the thicker the edge).\nIt is combined with a contiguous_box_plots.",
         "file_format": "png"
     }
 ]

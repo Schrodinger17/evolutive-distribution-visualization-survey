@@ -9,9 +9,7 @@
         "choices": [
             "Male",
             "Female",
-            "Undefined",
-            "Combat helicopter",
-            "None of the above"
+            "Other"
         ]
     },
     {
@@ -21,7 +19,7 @@
             "Scientific",
             "Literature",
             "Engineer",
-            "Literature",
+            "Service",
             "None of the above"
         ]
     },
@@ -38,15 +36,6 @@
     },
     {
         "question": "Did you already worked with data visualization?",
-        "type": "choice",
-        "choices": [
-            "Yes",
-            "No",
-            "I don't know"
-        ]
-    },
-    {
-        "question": "Do you like pineapple pizza ?",
         "type": "choice",
         "choices": [
             "Yes",

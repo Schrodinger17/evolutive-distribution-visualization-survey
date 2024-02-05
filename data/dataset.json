@@ -1,11 +1,11 @@
 [
     {
-        "name": "Tokyo",
+        "name": "Tokyo's maximum temperature (Celsius) by year from 2008 to 2018",
         "raw_name": "tokyo",
-        "description": "Tokyo maximum temperature (Celsius) from 2008 to 2018"
+        "description": "Density of Tokyo's maximum temperature (Celsius) by year from 2008 to 2018"
     },
     {
-        "name": "Average degree evolution",
+        "name": "Average degree evolution (k=1) by year from 2004 to 2013",
         "raw_name": "network",
         "description": "Average degree evolution of the network (k=1) for personal social network from 2004 to 2013"
     }
