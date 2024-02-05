@@ -203,9 +203,6 @@ async function display_solution(solutions) {
     
     solution_div.appendChild(img_div);
     
-    let body = document.getElementById("body");
-    body.appendChild(solution_div);
-    
     let start_time = new Date();
 
     // Next button
@@ -220,8 +217,8 @@ async function display_solution(solutions) {
         solution_div.remove();
 
         //Remove continue button
-        let send_button = document.getElementById("button");
-        send_button.remove();
+        //let send_button = document.getElementById("button");
+        //send_button.remove();
 
         answers["solution"].push({"solution": solution.raw_name, "duration": new Date() - start_time});
         display_solution(solutions);
@@ -231,7 +228,10 @@ async function display_solution(solutions) {
     button_div.id = "button";
     button_div.appendChild(send_button);
     
-    body.appendChild(button_div);
+    solution_div.appendChild(button_div);
+
+    let body = document.getElementById("body");
+    body.appendChild(solution_div);
 }
 
 

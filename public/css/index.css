@@ -1,3 +1,7 @@
+#body {
+    align-items: center;
+}
+
 #credits {
     display: flex;
     justify-content: center;
