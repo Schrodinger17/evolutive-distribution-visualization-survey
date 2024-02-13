@@ -263,18 +263,24 @@ async function get_task() {
 async function generate_pairs() {
     const solutions = await data.get_solutions();
 
-    //Shuffle solutions
-    solutions.sort(() => Math.random() - 0.5);
+    let solutions_order = [];
 
-    //Add first solution to the end to have an even number of solutions
-    if (solutions.length % 2 == 1) {
-        solutions.push(solutions[0]);
+    for (let i = 0; i < 3; i++) {
+        //Shuffle solutions
+        solutions.sort(() => Math.random() - 0.5);
+
+        solutions_order.push(...solutions);
+        
+        //Add first solution to the end to have an even number of solutions
+        if (solutions_order.length % 2 == 1) {
+            solutions_order.push(solutions[0]);
+        }
     }
 
     //Generate pairs
     let pairs = [];
-    for (let i = 0; i < solutions.length; i += 2) {
-        pairs.push([solutions[i], solutions[i + 1]]);
+    for (let i = 0; i < solutions_order.length; i += 2) {
+        pairs.push([solutions_order[i], solutions_order[i + 1]]);
     }
 
     return pairs;
