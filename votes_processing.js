@@ -79,13 +79,13 @@ function write_vote_to_csv(filename, vote, columns_names, demographic_questions,
         pre_processed_votes[solution1 + '_vs_' + solution2] = vote;
     });
 
-    console.log(pre_processed_votes);
+    //console.log(pre_processed_votes);
 
     solutions.forEach(solution1 => {
         solutions.forEach(solution2 => {
             if (solution1.raw_name.localeCompare(solution2.raw_name)) {
                 const v = pre_processed_votes[solution1.raw_name + '_vs_' + solution2.raw_name];
-                console.log(solution1.raw_name + '_vs_' + solution2.raw_name, v);
+                //console.log(solution1.raw_name + '_vs_' + solution2.raw_name, v);
                 if (v == undefined) {
                     line += ',';
                     line += ',';
