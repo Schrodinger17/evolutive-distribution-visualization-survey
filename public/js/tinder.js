@@ -260,28 +260,28 @@ async function get_task() {
     return tasks[Math.floor(Math.random() * tasks.length)];
 }
 
-async function generate_pairs() {
+async function generate_pairs(n = 30) {
     const solutions = await data.get_solutions();
 
-    let solutions_order = [];
+    let all_pairs = [];
 
-    for (let i = 0; i < 3; i++) {
-        //Shuffle solutions
-        solutions.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < solutions.length; i++) {
+        for (let j = 0; j < solutions.length; j++) {
+            if (j >= i) continue;
 
-        solutions_order.push(...solutions);
-        
-        //Add first solution to the end to have an even number of solutions
-        if (solutions_order.length % 2 == 1) {
-            solutions_order.push(solutions[0]);
+            if (Math.random() < 0.5) {
+                all_pairs.push([solutions[i], solutions[j]]);
+            } else {
+                all_pairs.push([solutions[j], solutions[i]]);
+            }
         }
     }
 
-    //Generate pairs
-    let pairs = [];
-    for (let i = 0; i < solutions_order.length; i += 2) {
-        pairs.push([solutions_order[i], solutions_order[i + 1]]);
-    }
+    //Shuffle pairs
+    all_pairs.sort(() => Math.random() - 0.5);
+
+    //Get n pairs
+    let pairs = all_pairs.slice(0, n);
 
     return pairs;
 }
@@ -295,20 +295,8 @@ async function display_pair(pairs) {
         let info_div = document.getElementById("info");
         info_div.remove();
 
-        // Next button
-        let send_button = document.createElement('button');
-        send_button.innerHTML = "Send votes";
-        send_button.id = "send_button";
-        send_button.onclick = function () {
-            console.log("Votes sent.");
-            send_votes();
-        }
-        
-        let button_div = document.createElement('div');
-        button_div.id = "button";
-        button_div.appendChild(send_button);
-        
-        body.appendChild(button_div);
+        // Send Votes
+        send_votes();
 
         return;
     }
@@ -390,14 +378,6 @@ async function display_pairs() {
     let task_description = document.createElement('p');
     task_description.innerHTML = task.description;
     info_div.appendChild(task_description);
-
-    let dataset_title = document.createElement('h2');
-    dataset_title.innerHTML = "Dataset : " + dataset.name;
-    info_div.appendChild(dataset_title);
-
-    let dataset_description = document.createElement('p');
-    dataset_description.innerHTML = dataset.description;
-    info_div.appendChild(dataset_description);
 
     let body = document.getElementById("body");
     body.appendChild(info_div);

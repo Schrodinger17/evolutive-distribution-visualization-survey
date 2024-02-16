@@ -28,7 +28,8 @@
 }
 
 #pairs > .solution, #equal {
-    max-width: 33%;
+    width: 33%;
+    height: 100%;
     border: solid #84ceeb;
     border-radius: 12px;
 }
