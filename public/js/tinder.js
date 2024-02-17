@@ -114,8 +114,8 @@ async function display_demographic_questions() {
 
 
 //====================================================================================================================================
-async function display_solution(solutions) {
-    if (solutions.length == 0) {
+async function display_solution(solutions, id) {
+    if (id == solutions.length) {
 
         let instruction_div = document.createElement('div')
         instruction_div.id = "instruction";
@@ -172,7 +172,7 @@ async function display_solution(solutions) {
         return;
     }
 
-    const solution = solutions.shift();
+    const solution = solutions[id];
 
     let solution_div = document.createElement('div')
     solution_div.className = "solution";
@@ -205,28 +205,62 @@ async function display_solution(solutions) {
     
     let start_time = new Date();
 
+    let button_div = document.createElement('div');
+    button_div.id = "button";
+
+    // Prev button
+    if (id != 0) {
+        let prev_button = document.createElement('button');
+        prev_button.id = "send_button";
+        prev_button.innerHTML = "Previous";
+        prev_button.onclick = function () {
+            console.log("Previous solution.");
+    
+            //Remove solution
+            let solution_div = document.getElementById("solution");
+            solution_div.remove();
+            display_solution(solutions, id - 1);
+        }
+
+        button_div.appendChild(prev_button);
+    }
+
     // Next button
-    let send_button = document.createElement('button');
-    send_button.id = "send_button";
-    send_button.innerHTML = "Continue";
-    send_button.onclick = function () {
+    let next_button = document.createElement('button');
+    next_button.id = "send_button";
+    next_button.innerHTML = "Next";
+    next_button.onclick = function () {
         console.log("Next solution.");
 
         //Remove solution
         let solution_div = document.getElementById("solution");
         solution_div.remove();
 
-        //Remove continue button
-        //let send_button = document.getElementById("button");
-        //send_button.remove();
 
-        answers["solution"].push({"solution": solution.raw_name, "duration": new Date() - start_time});
-        display_solution(solutions);
+        // solution already saved in answers
+        let already_saved = false;
+        answers["solution"].forEach(saved_solution => {
+            if (saved_solution["solution"] == solution.raw_name) {
+                already_saved = true;
+            }
+        });
+
+        if (!already_saved) {
+            answers["solution"].push({"solution": solution.raw_name, "duration": new Date() - start_time});
+        } else {
+            answers["solution"].forEach(saved_solution => {
+                if (saved_solution["solution"] == solution.raw_name) {
+                    saved_solution["duration"] += new Date() - start_time;
+                }
+            });
+        }
+
+        console.log(answers["solution"])
+
+
+        display_solution(solutions, id + 1);
     }
-    
-    let button_div = document.createElement('div');
-    button_div.id = "button";
-    button_div.appendChild(send_button);
+    button_div.appendChild(next_button);
     
     solution_div.appendChild(button_div);
 
@@ -242,7 +276,7 @@ async function display_solutions() {
     //Times
     answers["solution"] = [];
     
-    display_solution(solutions);
+    display_solution(solutions, 0);
     //display_solution([]);
 }
 

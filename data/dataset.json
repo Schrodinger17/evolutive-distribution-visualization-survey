@@ -10,16 +10,6 @@
         "description": "Average clustering coefficient of the network (k=1) for personal social network from 2004 to 2013"
     },
     {
-        "name": "Average degree evolution (k=2) by year from 2004 to 2013",
-        "raw_name": "network_AverageDegree_k2",
-        "description": "Average degree evolution of the network (k=2) for personal social network from 2004 to 2013"
-    },
-    {
-        "name": "Average clustering coefficient (k=2) by year from 2004 to 2013",
-        "raw_name": "network_AverageClusteringCoefficient_k2",
-        "description": "Average clustering coefficient of the network (k=2) for personal social network from 2004 to 2013"
-    },
-    {
         "name": "Average degree evolution (k=3) by year from 2004 to 2013",
         "raw_name": "network_AverageDegree_k3",
         "description": "Average degree evolution of the network (k=3) for personal social network from 2004 to 2013"
