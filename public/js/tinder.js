@@ -125,7 +125,7 @@ async function display_solution(solutions, id) {
         instruction_div.appendChild(instruction_title);
         
         let instruction_description = document.createElement('p');
-        instruction_description.innerHTML = "Please, select the best solution for the following task on the following dataset. If none of the is better than the other one, click in the middle.";
+        instruction_description.innerHTML = "For the following task, select the best solution for the following task on the following dataset. If none of the is better than the other one, click in the middle. Like the example underneath";
         instruction_div.appendChild(instruction_description);
 
         let task_title = document.createElement('h2');
@@ -143,6 +143,16 @@ async function display_solution(solutions, id) {
         let dataset_description = document.createElement('p');
         dataset_description.innerHTML = dataset.description;
         instruction_div.appendChild(dataset_description);
+
+        let example = document.createElement('h2');
+        example.innerHTML = "Example";
+        instruction_div.appendChild(example);
+
+        let img_example = document.createElement('img');
+        img_example.src = "data/vote_example.png";
+        img_example.style.maxWidth = "50%";
+        img_example.style.maxHeight = "50%";
+        instruction_div.appendChild(img_example);
         
         // Next button
         let send_button = document.createElement('button');

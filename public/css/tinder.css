@@ -1,7 +1,6 @@
 #demographic_questions {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 

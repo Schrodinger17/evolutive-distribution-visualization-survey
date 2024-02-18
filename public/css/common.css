@@ -28,11 +28,11 @@ html, body {
     bottom: 5em;
     left: 0px;
     right: 0px;
-    /*height: 85vh;*/
     
-    overflow: clip;
     display: flex;
     flex-direction: column;
+
+    overflow: auto;
 }
 
 #footer {
