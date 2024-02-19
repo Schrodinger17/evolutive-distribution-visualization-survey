@@ -207,7 +207,8 @@ async function display_solution(solutions, id) {
     img_div.id = "img_div";
 
     let img = document.createElement('img');
-    img.src = "data/solutions/" + solution.raw_name + "/" + solution.raw_name + "_tokyo." + solution.file_format;
+    // img.src = "data/solutions/" + solution.raw_name + "/" + solution.raw_name + "_tokyo." + solution.file_format;
+    img.src = "data/solutions/" + solution.raw_name + "/" + solution.raw_name + "." + solution.file_format;
     
     img_div.appendChild(img);
     
