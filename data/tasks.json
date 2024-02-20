@@ -1,18 +1,18 @@
 [
     {
-        "name": "Task : Which one is the best for finding the maximum value over all distributions.",
+        "name": "Task : Which is the more appropriate visualization for finding the maximum value over all distributions.",
         "description": ""
     },
     {
-        "name": "Task : Which one is the best for reading the evolution of distributions over time.",
+        "name": "Task : Which is the more appropriate visualization for understanding the evolution of distributions over time.",
         "description": ""
     },
     {
-        "name": "Task : Which one is the best for finding pattern over time.",
+        "name": "Task : Which is the more appropriate visualization for detecting evolution patterns over time.",
         "description": ""
     },
     {
-        "name": "Task : Which one is the best for individually analyzing the third distribution.",
+        "name": "Task : Which is the more appropriate visualization for individually analyzing the third distribution.",
         "description": ""
     }
 ]

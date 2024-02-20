@@ -125,7 +125,7 @@ async function display_solution(solutions, id) {
         instruction_div.appendChild(instruction_title);
         
         let instruction_description = document.createElement('p');
-        instruction_description.innerHTML = "For the following task, select the best solution for the following task on the following dataset. If none of the is better than the other one, click in the middle. Like the example underneath";
+        instruction_description.innerHTML = "In the following, you will be given a task, and two visualizations. The visualizations plot data from the dataset described below. Your role is to indicate the more appropriate visualization completing the given task, by clicking on the preferred visualization, or to indicate if the two visualizations perform equally, by clicking on the middle space. An example is provided below.";
         instruction_div.appendChild(instruction_description);
 
         let task_title = document.createElement('h2');
