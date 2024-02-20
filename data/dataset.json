@@ -6,7 +6,7 @@
     },
     {
         "name": "Average clustering coefficient of the network (k=1) for personal social network from 2004 to 2013",
-        "raw_name": "network_AverageClusteringCoefficient_k1",
+        "raw_name": "network_AVC_k1",
         "description": ""
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "name": "Average clustering coefficient of the network (k=3) for personal social network from 2004 to 2013",
-        "raw_name": "network_AverageClusteringCoefficient_k3",
+        "raw_name": "network_AVC_k3",
         "description": ""
     }
 ]
