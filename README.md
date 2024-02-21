@@ -19,3 +19,11 @@ npm start
 ```bash
 npm run csv
 ```
+
+### Get votes as csv file from the server
+
+```bash
+scp debian@survey-info.polytech.univ-nantes.prive:/home/debian/evolutive-distribution-survey/votes.csv .
+```
+
+4suFFyCv
