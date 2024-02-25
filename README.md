@@ -1,5 +1,7 @@
 # Web site to vote for the best evolutive distribution vizualisation method
 
+Created by Tristan MANIER and Marin CHEVOLEAU in 2023-2024 at Polytech Nantes
+
 ## How to use this web site
 
 ### Initialize the web site
@@ -20,10 +22,4 @@ npm start
 npm run csv
 ```
 
-### Get votes as csv file from the server
-
-```bash
-scp debian@survey-info.polytech.univ-nantes.prive:/home/debian/evolutive-distribution-survey/votes.csv .
-```
-
-4suFFyCv
+Votes are saved in the votes.csv file at the root of the project.

@@ -26,8 +26,8 @@ app.get('/', (req, res) => {
     res.sendFile('public/html/index.html', { 'root': __dirname });
 })
 
-app.get('/tinder', (req, res) => {
-    res.sendFile('public/html/tinder.html', { 'root': __dirname });
+app.get('/vote', (req, res) => {
+    res.sendFile('public/html/vote.html', { 'root': __dirname });
 })
 
 const PORT = process.env.PORT || 80;
